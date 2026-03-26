@@ -152,12 +152,14 @@ export function isColdAndHot(temp1, temp2) {
  * makeABBA("Hi", "Bye"); // "HiByeByeHi"
  * @example
  * makeABBA("Yo", "Alice"); // "YoAliceAliceYo"
- * @example
+ * @exampleﬁ
  * makeABBA("a", "b"); // "abba"
  */
 
 export function makeABBA(A, B) {
-  return A.concat( B, B, A);
+/* took me a few tries to get it right. I didn't realize it was forwards then backwards! shoulda known from ABBA
+*/
+  return A.concat( B, B, A)
 }
 
 /**
@@ -178,7 +180,13 @@ export function makeABBA(A, B) {
  * makeSLS("a", "abc"); // "aabca"
  */
 export function makeSLS(str1, str2) {
-  /* TODO */
+/* writing a function to assess string lengths and the concatenate accordingly
+*/
+    if (str1.length < str2.length) {
+      return str1.concat( str2, str1)
+    } else {
+      return str2.concat( str1, str2)
+    }
 }
 
 /**
@@ -199,7 +207,15 @@ export function makeSLS(str1, str2) {
  * canEnterClub(5, 5); // 1
  */
 export function canEnterClub(you, date) {
-  /* TODO */
+/* okay so for this one we needed to see if either myself or my date was good enough to get into a club I myself would never go to in the first place. If I am hotter or my date is  than an 8 or a 2 then we get in. If one us is below a 2 then no, otherwise maybe. I say we leave and go get tacos my friend.
+*/
+   if (you >= 8 || you > 2 || date >= 8 || date > 2 ) {
+    return 2
+   } else if (you >= 8 || you < 2 || date >= 8 || date < 2 ) {
+      return 0
+   } else {
+    return 1
+   }
 }
 
 /**
@@ -220,5 +236,11 @@ export function canEnterClub(you, date) {
  * shouldAnswerPhone(true, true, false); // true
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
-  /* TODO */
+/* I honestly thought no it can't be that simple but it actually was.
+*/
+   if (isMorning === true && isBoss === true && isAsleep === false) {
+    return true
+   } else {
+    return false
+   }
 }

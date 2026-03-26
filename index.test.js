@@ -175,7 +175,7 @@ describe("isColdAndHot", function () {
   });
 });
 
-describe.only("makeABBA", function () {
+describe("makeABBA", function () {
   it("builds ABBA from two normal words", function () {
     expect(makeABBA("Hi", "Bye")).toBe("HiByeByeHi");
     expect(makeABBA("Yo", "Alice")).toBe("YoAliceAliceYo");
@@ -203,7 +203,7 @@ describe.only("makeABBA", function () {
   });
 });
 
-describe("makeSLS", function () {
+describe.only("makeSLS", function () {
   it("puts shorter first string outside when first is shorter", function () {
     expect(makeSLS("Hi", "Hello")).toBe("HiHelloHi");
     expect(makeSLS("a", "abc")).toBe("aabca");
