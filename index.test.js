@@ -92,7 +92,7 @@ describe("near100", function () {
   });
 });
 
-describe.only("isMultiple35", function () {
+describe("isMultiple35", function () {
   it("is true for a multiple of 3 only", function () {
     expect(isMultiple35(3)).toBe(true);
     expect(isMultiple35(9)).toBe(true);
@@ -175,7 +175,7 @@ describe("isColdAndHot", function () {
   });
 });
 
-describe("makeABBA", function () {
+describe.only("makeABBA", function () {
   it("builds ABBA from two normal words", function () {
     expect(makeABBA("Hi", "Bye")).toBe("HiByeByeHi");
     expect(makeABBA("Yo", "Alice")).toBe("YoAliceAliceYo");

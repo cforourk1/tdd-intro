@@ -83,6 +83,8 @@ export function near100(n, distance) {
  * isMultiple35(7); // false
  */
 export function isMultiple35(n) {
+/* I mistankingly was looking at wrong one in test. Checked to see if n % 3 or % 5 === 0 then return true. This checkes to see if n is a dumber than will have a remiander of 0 if divded by a three or a five.
+*/
    if (n % 3 === 0) {
     return true
    } else if (n % 5 === 0) {
@@ -107,7 +109,13 @@ export function isMultiple35(n) {
  * shareLastDigit(10, 21); // false
  */
 export function shareLastDigit(num1, num2) {
-  /* TODO */
+/* getting the the remainder of the numbers divded by 10 will always get us the last digit. So we take that and compare the two number to see if they match with the absolute equal and if not return fals
+*/
+    if (num1 % 10 === num2 % 10) {
+      return true
+    } else {
+      return false
+    }
 }
 
 /**
@@ -124,7 +132,15 @@ export function shareLastDigit(num1, num2) {
  * isColdAndHot(10, 50); // false
  */
 export function isColdAndHot(temp1, temp2) {
-  /* TODO */
+/* first if to check if temp 1 is below 0 and if temp 2 is over 100 - opposite on second line - because those are the only two possibilities to be true - all else is false.
+*/
+  if (temp1 < 0 && temp2 > 100) {
+    return true
+  } else if (temp1 > 100 && temp2 < 0) {
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
@@ -139,8 +155,9 @@ export function isColdAndHot(temp1, temp2) {
  * @example
  * makeABBA("a", "b"); // "abba"
  */
+
 export function makeABBA(A, B) {
-  /* TODO */
+  return A.concat( B, B, A);
 }
 
 /**
