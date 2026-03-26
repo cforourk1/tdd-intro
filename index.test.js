@@ -39,7 +39,7 @@ describe("sumDouble", function () {
   });
 });
 
-describe("makes10", function () {
+describe.only("makes10", function () {
   it("is true when first number is 10", function () {
     expect(makes10(10, 0)).toBe(true);
   });

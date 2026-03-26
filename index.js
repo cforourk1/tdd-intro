@@ -12,14 +12,17 @@
  * sumDouble(5, 5); // 20
  */
 export function sumDouble(num1, num2) {
+/* I chose to see if num1 is absolute equal to num2 then return them added together, multiply sum by 2 if true. Else - return the two values added together.
+*/
     if (num1 === num2) {
-      return (num1 * 2)
-  } else if (num1 !== num2) {
-      return (num1 + mum2)
+      return (num1 + num2) * 2
   } else {
-    return 0
+    return (num1 + num2)
   }
 }
+
+/* second function
+*/
 
 /**
  * @param {number} num1 - First number.
@@ -34,7 +37,15 @@ export function sumDouble(num1, num2) {
  * makes10(4, 4); // false
  */
 export function makes10(num1, num2) {
-  /* TODO */
+/* first if statement checks if either number is equal to 10. I misread it at first as greater than or equal to ten. Second statement if both numbers added together equal ten - then true. All else is false.
+*/
+    if (num1 === 10 || num2 === 10) {
+      return true
+    } else if (num1 + num2 === 10) {
+      return true
+    } else {
+      return false
+    }
 }
 
 /**
