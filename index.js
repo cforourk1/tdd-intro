@@ -63,7 +63,10 @@ export function makes10(num1, num2) {
  * near100(105, 10); // true
  */
 export function near100(n, distance) {
-  /* TODO */
+/* math.abs still doesnt make a ton of sense to me. I understand we are seeing the difference of one value compared to another and then checking to see if THAT number is within an allowed range.
+*/
+      return Math.abs(n - 100) <= distance
+
 }
 
 /**

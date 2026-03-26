@@ -39,7 +39,7 @@ describe("sumDouble", function () {
   });
 });
 
-describe.only("makes10", function () {
+describe("makes10", function () {
   it("is true when first number is 10", function () {
     expect(makes10(10, 0)).toBe(true);
   });
@@ -124,7 +124,7 @@ describe("isMultiple35", function () {
   });
 });
 
-describe("shareLastDigit", function () {
+describe.only("shareLastDigit", function () {
   it("is true when both are one-digit and equal", function () {
     expect(shareLastDigit(7, 7)).toBe(true);
   });
