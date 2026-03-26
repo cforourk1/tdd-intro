@@ -12,7 +12,13 @@
  * sumDouble(5, 5); // 20
  */
 export function sumDouble(num1, num2) {
-  /* TODO */
+    if (num1 === num2) {
+      return (num1 * 2)
+  } else if (num1 !== num2) {
+      return (num1 + mum2)
+  } else {
+    return 0
+  }
 }
 
 /**
