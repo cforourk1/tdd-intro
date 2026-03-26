@@ -92,7 +92,7 @@ describe("near100", function () {
   });
 });
 
-describe("isMultiple35", function () {
+describe.only("isMultiple35", function () {
   it("is true for a multiple of 3 only", function () {
     expect(isMultiple35(3)).toBe(true);
     expect(isMultiple35(9)).toBe(true);
@@ -124,7 +124,7 @@ describe("isMultiple35", function () {
   });
 });
 
-describe.only("shareLastDigit", function () {
+describe("shareLastDigit", function () {
   it("is true when both are one-digit and equal", function () {
     expect(shareLastDigit(7, 7)).toBe(true);
   });
